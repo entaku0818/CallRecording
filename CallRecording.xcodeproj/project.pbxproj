@@ -14,6 +14,7 @@
 		611A24712A84641700F68D7D /* CallRecordingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611A24702A84641700F68D7D /* CallRecordingTests.swift */; };
 		611A247B2A84641700F68D7D /* CallRecordingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611A247A2A84641700F68D7D /* CallRecordingUITests.swift */; };
 		611A247D2A84641700F68D7D /* CallRecordingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611A247C2A84641700F68D7D /* CallRecordingUITestsLaunchTests.swift */; };
+		612C5DFE2A8EF45E005336F0 /* TwilioVoice in Frameworks */ = {isa = PBXBuildFile; productRef = 612C5DFD2A8EF45E005336F0 /* TwilioVoice */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				612C5DFE2A8EF45E005336F0 /* TwilioVoice in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,9 @@
 			dependencies = (
 			);
 			name = CallRecording;
+			packageProductDependencies = (
+				612C5DFD2A8EF45E005336F0 /* TwilioVoice */,
+			);
 			productName = CallRecording;
 			productReference = 611A245C2A84641600F68D7D /* CallRecording.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +224,9 @@
 				Base,
 			);
 			mainGroup = 611A24532A84641600F68D7D;
+			packageReferences = (
+				612C5DFC2A8EF45E005336F0 /* XCRemoteSwiftPackageReference "twilio-voice-ios" */,
+			);
 			productRefGroup = 611A245D2A84641600F68D7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -591,6 +599,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		612C5DFC2A8EF45E005336F0 /* XCRemoteSwiftPackageReference "twilio-voice-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twilio/twilio-voice-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		612C5DFD2A8EF45E005336F0 /* TwilioVoice */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 612C5DFC2A8EF45E005336F0 /* XCRemoteSwiftPackageReference "twilio-voice-ios" */;
+			productName = TwilioVoice;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 611A24542A84641600F68D7D /* Project object */;
 }
